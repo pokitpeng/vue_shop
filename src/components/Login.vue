@@ -1,9 +1,28 @@
 <template>
   <div class="login_container">
     <div class="login_box">
+      <!-- 头像区域 -->
       <div class="logo_box">
         <img src="../assets/logo.png" alt="" />
       </div>
+
+      <!-- 登陆表单区域 -->
+      <el-form label-width="0px" class="login_form">
+        <!-- 用户名 -->
+        <el-form-item>
+          <el-input></el-input>
+        </el-form-item>
+        <!-- 密码 -->
+        <el-form-item>
+          <el-input></el-input>
+        </el-form-item>
+
+        <!-- 按钮 -->
+        <el-form-item class="btn">
+          <el-button type="primary">登陆</el-button>
+          <el-button type="info">重置</el-button>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
@@ -55,5 +74,18 @@ export default {
     height: 100%;
     border-radius: 50%; // 图片超出了盒子范围，所以图片也要调整圆角
   }
+}
+.login_form {
+  position: absolute;
+  bottom: 0; // 放在底部边缘
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box; // 长度不超过边缘
+}
+.btn {
+  display: flex; // 按钮框转成弹性盒模型
+  justify-content: flex-end; // 右对齐
+  // position: absolute;
+  // left: 50%; // 右移50%
 }
 </style>
